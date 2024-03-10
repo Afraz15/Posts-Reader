@@ -1,9 +1,8 @@
-// contentScript.js
 allText = [];
 
 function captureTextFromChildDivs() {
   parentElements = document.querySelectorAll(
-    ".xdj266r.x11i5rnm.xat24cr.x1mh8g0r.x1vvkbs.x126k92a"
+    ".xdj266r.x11i5rnm.xat24cr.x1mh8g0r.x1vvkbs.x126k92a, .x1swvt13.x1pi30zi.xexx8yu.x18d9i69, .x1yx25j4.x13crsa5.x6x52a7.x1rxj1xn.xxpdul3, div[data-ad-comet-preview='message']"
   );
   console.log("Parent Elements:", parentElements);
 
@@ -26,11 +25,8 @@ function captureTextFromChildDivs() {
   console.log("All Text:", allText);
 }
 
-// Initial capture
 captureTextFromChildDivs();
 
-// Listen for scroll events to capture dynamically loaded content
 window.addEventListener("scroll", () => {
-  // You may want to implement additional logic to check if more content is available
   captureTextFromChildDivs();
 });

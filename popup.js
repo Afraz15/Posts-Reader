@@ -1,4 +1,3 @@
-// popup.js
 document.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("injectButton").addEventListener("click", () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
