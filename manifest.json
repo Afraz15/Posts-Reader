@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Injector",
+  "version": "1.0",
+  "description": "Injects a script into the active tab",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
